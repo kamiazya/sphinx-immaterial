@@ -1,0 +1,3451 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="_static/favicon.ico">
+    
+    
+      
+        <title>sample API documentation and generated content - Sphinx-Immaterial</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="_static/google_fonts.css" />
+        <link rel="stylesheet" type="text/css" href="_static/stylesheets/sphinx_immaterial_theme.ce877ce75602c6c77.min.css" />
+        <link rel="stylesheet" type="text/css" href="_static/extra_css.css" />
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+              </button>
+            
+            
+  <p>
+    Now includes
+    <a href="https://squidfunk.github.io/mkdocs-material/changelog/">changes from mkdocs-material theme</a>
+    v8.5.6
+  </p>
+
+          </div>
+          
+            <script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Sphinx-Immaterial" class="md-header__button md-logo" aria-label="Sphinx-Immaterial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sphinx-Immaterial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              sample API documentation and generated content
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jbms/sphinx-immaterial/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Sphinx-Immaterial
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Sphinx-Immaterial" class="md-nav__button md-logo" aria-label="Sphinx-Immaterial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    Sphinx-Immaterial
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jbms/sphinx-immaterial/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Sphinx-Immaterial
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="customization.html" class="md-nav__link">
+        <span class="md-ellipsis">Customization</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="admonitions.html" class="md-nav__link">
+        <span class="md-ellipsis">Admonitions</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="content_tabs.html" class="md-nav__link">
+        <span class="md-ellipsis">Content tabs</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="task_lists.html" class="md-nav__link">
+        <span class="md-ellipsis">Task Lists</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="keys.html" class="md-nav__link">
+        <span class="md-ellipsis">Keys extension</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          <span class="md-ellipsis">Code Blocks</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Code Blocks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Code Blocks</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="code_syntax_highlighting.html" class="md-nav__link">
+        <span class="md-ellipsis">Code syntax highlighting</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="code_annotations.html" class="md-nav__link">
+        <span class="md-ellipsis">Code Annotations</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          <span class="md-ellipsis">API documentation customization</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API documentation customization" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">API documentation customization</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="apidoc/index.html" class="md-nav__link">
+        <span class="md-ellipsis">General API customization</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="apidoc/format_signatures.html" class="md-nav__link">
+        <span class="md-ellipsis">Formatting signatures</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="apidoc/python/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Python domain customization</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="apidoc/python/apigen.html" class="md-nav__link">
+        <span class="md-ellipsis">Python API documentation generation</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="apidoc/cpp/index.html" class="md-nav__link">
+        <span class="md-ellipsis">C++ domain customization</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="apidoc/cpp/external_cpp_references.html" class="md-nav__link">
+        <span class="md-ellipsis">External C++ symbol links</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="apidoc/cpp/cppreference.html" class="md-nav__link">
+        <span class="md-ellipsis">Automatic cross-<wbr>linking to cppreference.<wbr>com</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="apidoc/cpp/apigen.html" class="md-nav__link">
+        <span class="md-ellipsis">C++ API documentation generation</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="apidoc/json/domain.html" class="md-nav__link">
+        <span class="md-ellipsis">JSON domain</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="inline_icons.html" class="md-nav__link">
+        <span class="md-ellipsis">Inline icons</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          <span class="md-ellipsis">Diagrams/graphs</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Diagrams/graphs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Diagrams/graphs</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graphviz.html" class="md-nav__link">
+        <span class="md-ellipsis">Graphviz</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mermaid_diagrams.html" class="md-nav__link">
+        <span class="md-ellipsis">Mermaid diagrams</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          <span class="md-ellipsis">Examples and Uses</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples and Uses" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Examples and Uses</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">sample API documentation and generated content</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">sample API documentation and generated content</span>
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      <span class="md-ellipsis">sample API documentation and generated content</span>
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-api" class="md-nav__link">
+    <span class="md-ellipsis">Python API</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-py-module" class="md-nav__link">
+    <span class="md-ellipsis">test_<wbr>py_<wbr>module</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="test_py_module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo" class="md-nav__link">
+    <span aria-label="Python class" class="objinfo-icon objinfo-icon__data" title="Python class">C</span><span title="test_py_module.test.Foo (Python class) — Docstring for class Foo." class="md-ellipsis">test_<wbr>py_<wbr>module.<wbr>test.<wbr>Foo</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="test_py_module.test.Foo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.__init__" class="md-nav__link">
+    <span aria-label="Python method" class="objinfo-icon objinfo-icon__procedure" title="Python method">M</span><span title="test_py_module.test.Foo.__init__ (Python method) — Start the Foo." class="md-ellipsis">__<wbr>init__<wbr></span>
+  </a>
+  
+    <nav class="md-nav" aria-label="__init__">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.__init__-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.__init__.qux" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.__init__.qux (Python parameter) — The first argument to initialize class." class="md-ellipsis">qux</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.__init__.spam" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.__init__.spam (Python parameter) — Spam me yes or no..." class="md-ellipsis">spam</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.__weakref__" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.__weakref__ (Python attribute) — list of weak references to the object (if defined)" class="md-ellipsis">__<wbr>weakref__<wbr></span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.add" class="md-nav__link">
+    <span aria-label="Python method" class="objinfo-icon objinfo-icon__procedure" title="Python method">M</span><span title="test_py_module.test.Foo.add (Python method) — Return the added values." class="md-ellipsis">add</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="add">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.add-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.add.val1" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.add.val1 (Python parameter) — First number to add." class="md-ellipsis">val1</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.add.val2" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.add.val2 (Python parameter) — Second number to add." class="md-ellipsis">val2</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.add-return-type" class="md-nav__link">
+    <span class="md-ellipsis">Return type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function" class="md-nav__link">
+    <span aria-label="Python method" class="objinfo-icon objinfo-icon__procedure" title="Python method">M</span><span title="test_py_module.test.Foo.another_function (Python method) — Here is another function." class="md-ellipsis">another_<wbr>function</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="another_function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function.a" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.another_function.a (Python parameter) — The number of green hats you own." class="md-ellipsis">a</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function.b" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.another_function.b (Python parameter) — The number of non-green hats you own." class="md-ellipsis">b</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function.kwargs" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.another_function.kwargs (Python parameter) — Additional keyword arguments. Each keyword parameter should specify the name of your favorite cuisine. The values should be floats, specifying the mean price of your favorite dish in that cooking style." class="md-ellipsis">kwargs</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function-return-type" class="md-nav__link">
+    <span class="md-ellipsis">Return type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function-raises" class="md-nav__link">
+    <span class="md-ellipsis">Raises</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.bar" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.bar (Python attribute) — Doc comment for class attribute Foo.bar. It can have multiple lines." class="md-ellipsis">bar</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.baz" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.baz (Python attribute) — Docstring for class attribute Foo.baz." class="md-ellipsis">baz</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.capitalize" class="md-nav__link">
+    <span aria-label="Python method" class="objinfo-icon objinfo-icon__procedure" title="Python method">M</span><span title="test_py_module.test.Foo.capitalize (Python method) — Return a string as uppercase." class="md-ellipsis">capitalize</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="capitalize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.capitalize-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.capitalize.myvalue" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.capitalize.myvalue (Python parameter) — String to change" class="md-ellipsis">myvalue</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.capitalize-return-type" class="md-nav__link">
+    <span class="md-ellipsis">Return type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.flox" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.flox (Python attribute) — Doc comment for Foo.flox. One line only." class="md-ellipsis">flox</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.qux" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.qux (Python attribute) — Doc comment for instance attribute qux." class="md-ellipsis">qux</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.qux_caps" class="md-nav__link">
+    <span aria-label="Python property" class="objinfo-icon objinfo-icon__alias" title="Python property">P</span><span title="test_py_module.test.Foo.qux_caps (Python property) — Return the instance qux as uppercase." class="md-ellipsis">qux_<wbr>caps</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.qux_caps_cached" class="md-nav__link">
+    <span aria-label="Python property" class="objinfo-icon objinfo-icon__alias" title="Python property">P</span><span title="test_py_module.test.Foo.qux_caps_cached (Python property) — Return the cached value of instance qux as uppercase." class="md-ellipsis">qux_<wbr>caps_<wbr>cached</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.spam" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.spam (Python attribute) — Docstring for instance attribute spam." class="md-ellipsis">spam</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.func" class="md-nav__link">
+    <span aria-label="Python function" class="objinfo-icon objinfo-icon__procedure" title="Python function">F</span><span title="test_py_module.test.func (Python function) — A function with many parameters." class="md-ellipsis">test_<wbr>py_<wbr>module.<wbr>test.<wbr>func</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.overloaded_func" class="md-nav__link">
+    <span aria-label="Python function" class="objinfo-icon objinfo-icon__procedure" title="Python function">F</span><span title="test_py_module.test.overloaded_func (Python function) — Adds a and b." class="md-ellipsis">test_<wbr>py_<wbr>module.<wbr>test.<wbr>overloaded_<wbr>func</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="test_py_module.test.overloaded_func">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.overloaded_func-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.overloaded_func.a" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.overloaded_func.a (Python parameter) — First operand." class="md-ellipsis">a</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.overloaded_func.b" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.overloaded_func.b (Python parameter) — Second operand." class="md-ellipsis">b</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-api" class="md-nav__link">
+    <span class="md-ellipsis">C++ API</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C++ API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv46MyType" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="MyType (C++ type) — Some type" class="md-ellipsis">My<wbr>Type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c.DEFAULT_LENGTH" class="md-nav__link">
+    <span aria-label="C macro" class="objinfo-icon objinfo-icon__alias" title="C macro">D</span><span title="DEFAULT_LENGTH (C macro)" class="md-ellipsis">DEFAULT_<wbr>LENGTH</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Foo (C++ function) — Some function type thing" class="md-ellipsis">Foo</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Foo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-template-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Template Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Template Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-T" class="md-nav__link">
+    <span aria-label="C++ type template parameter" class="objinfo-icon objinfo-icon__alias" title="C++ type template parameter">T</span><span title="Foo::T (C++ type template parameter) — Some type template parameter." class="md-ellipsis">T</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-K" class="md-nav__link">
+    <span aria-label="C++ non-type template parameter" class="objinfo-icon objinfo-icon__data" title="C++ non-type template parameter">N</span><span title="Foo::K (C++ non-type template parameter) — Some non-type template parameter." class="md-ellipsis">K</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-bar" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Foo::bar (C++ function parameter) — This is the bar parameter." class="md-ellipsis">bar</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-arr" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Foo::arr (C++ function parameter) — Array of something." class="md-ellipsis">arr <wbr>[out]</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-len" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Foo::len (C++ function parameter) — Length of arr." class="md-ellipsis">len</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-baz" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Foo::baz (C++ function parameter) — Baz parameter." class="md-ellipsis">baz</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c.MY_MACRO" class="md-nav__link">
+    <span aria-label="C macro" class="objinfo-icon objinfo-icon__alias" title="C macro">D</span><span title="MY_MACRO (C macro) — Expands to something." class="md-ellipsis">MY_<wbr>MACRO</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MY_MACRO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c.MY_MACRO-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c.MY_MACRO-p-X" class="md-nav__link">
+    <span aria-label="C macro parameter" class="objinfo-icon objinfo-icon__sub-data" title="C macro parameter">p</span><span title="MY_MACRO.X (C macro parameter) — The X parameter to the macro." class="md-ellipsis">X</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c.MY_MACRO-p-Y" class="md-nav__link">
+    <span aria-label="C macro parameter" class="objinfo-icon objinfo-icon__sub-data" title="C macro parameter">p</span><span title="MY_MACRO.Y (C macro parameter) — The Y parameter to the macro." class="md-ellipsis">Y</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0000_NSt6size_tEENSt5arrayE" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="std::array (C++ class) — Some cpp class" class="md-ellipsis">std::<wbr>array</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N6Sphinx7versionE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="Sphinx::version (C++ member) — The description of Sphinx::version." class="md-ellipsis">Sphinx::<wbr>version</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv47version" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="version (C++ member) — The description of version." class="md-ellipsis">version</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44List" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="List (C++ type) — The description of List type." class="md-ellipsis">List</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv46MyEnum" class="md-nav__link">
+    <span aria-label="C++ enum" class="objinfo-icon objinfo-icon__data" title="C++ enum">E</span><span title="MyEnum (C++ enum) — An unscoped enum." class="md-ellipsis">My<wbr>Enum</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MyEnum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N6MyEnum1AE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="MyEnum::A (C++ enumerator)" class="md-ellipsis">A</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv412MyScopedEnum" class="md-nav__link">
+    <span aria-label="C++ enum" class="objinfo-icon objinfo-icon__data" title="C++ enum">E</span><span title="MyScopedEnum (C++ enum) — A scoped enum." class="md-ellipsis">My<wbr>Scoped<wbr>Enum</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MyScopedEnum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N12MyScopedEnum1BE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="MyScopedEnum::B (C++ enumerator) — Description of enumerator B." class="md-ellipsis">B</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv422MyScopedVisibilityEnum" class="md-nav__link">
+    <span aria-label="C++ enum" class="objinfo-icon objinfo-icon__data" title="C++ enum">E</span><span title="MyScopedVisibilityEnum (C++ enum) — A scoped enum with non-default visibility, and with a specified underlying type." class="md-ellipsis">My<wbr>Scoped<wbr>Visibility<wbr>Enum</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MyScopedVisibilityEnum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N22MyScopedVisibilityEnum1BE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="MyScopedVisibilityEnum::B (C++ enumerator)" class="md-ellipsis">B</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex8SomeTypeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="synopses_ex::SomeType (C++ type) — Description will be shown as a tooltip when hovering over cross-references to SomeType in other signatures as well as in the TOC." class="md-ellipsis">synopses_<wbr>ex::<wbr>Some<wbr>Type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="synopses_ex::Foo (C++ function) — Synopsis for this function, shown when hovering over cross references as well as in the TOC." class="md-ellipsis">synopses_<wbr>ex::<wbr>Foo</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="synopses_ex::Foo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-template-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Template Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Template Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-T" class="md-nav__link">
+    <span aria-label="C++ type template parameter" class="objinfo-icon objinfo-icon__alias" title="C++ type template parameter">T</span><span title="synopses_ex::Foo::T (C++ type template parameter) — Tooltip shown when hovering over cross-references to this template parameter." class="md-ellipsis">T</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-N" class="md-nav__link">
+    <span aria-label="C++ non-type template parameter" class="objinfo-icon objinfo-icon__data" title="C++ non-type template parameter">N</span><span title="synopses_ex::Foo::N (C++ non-type template parameter) — Tooltip shown for N." class="md-ellipsis">N</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-param" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="synopses_ex::Foo::param (C++ function parameter) — Tooltip shown for cross-references to this function parameter param." class="md-ellipsis">param</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-arr" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="synopses_ex::Foo::arr (C++ function parameter) — Tooltip shown for cross-references to this function parameter arr." class="md-ellipsis">arr</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5ClassE" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="synopses_ex::Class (C++ class) — The pin attached to Chip Enable on the RF module" class="md-ellipsis">synopses_<wbr>ex::<wbr>Class</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="synopses_ex::Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="synopses_ex::Class::Class (C++ function) — The pin attached to Chip Enable on the RF module" class="md-ellipsis">Class</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_cepin" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="synopses_ex::Class::Class::_cepin (C++ function parameter) — The pin attached to Chip Enable on the RF module" class="md-ellipsis">_<wbr>cepin</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_cspin" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="synopses_ex::Class::Class::_cspin (C++ function parameter) — The pin attached to Chip Select (often labeled CSN) on the radio module." class="md-ellipsis">_<wbr>cspin</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_spi_speed" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="synopses_ex::Class::Class::_spi_speed (C++ function parameter) — The SPI speed in Hz ie: 1000000 == 1Mhz" class="md-ellipsis">_<wbr>spi_<wbr>speed</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-api" class="md-nav__link">
+    <span class="md-ellipsis">Java<wbr>Script API</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JavaScript API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module_a.submodule.ModTopLevel" class="md-nav__link">
+    <span aria-label="JavaScript class" class="objinfo-icon objinfo-icon__data" title="JavaScript class">C</span><span title="module_a.submodule.ModTopLevel (JavaScript class)" class="md-ellipsis">module_<wbr>a.<wbr>submodule.<wbr>Mod<wbr>Top<wbr>Level</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_a.submodule.ModTopLevel.mod_child_1" class="md-nav__link">
+    <span aria-label="JavaScript method" class="objinfo-icon objinfo-icon__procedure" title="JavaScript method">M</span><span title="module_a.submodule.ModTopLevel.mod_child_1 (JavaScript method)" class="md-ellipsis">Mod<wbr>Top<wbr>Level.<wbr>mod_<wbr>child_<wbr>1</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_a.submodule.ModTopLevel.mod_child_2" class="md-nav__link">
+    <span aria-label="JavaScript method" class="objinfo-icon objinfo-icon__procedure" title="JavaScript method">M</span><span title="module_a.submodule.ModTopLevel.mod_child_2 (JavaScript method)" class="md-ellipsis">Mod<wbr>Top<wbr>Level.<wbr>mod_<wbr>child_<wbr>2</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested" class="md-nav__link">
+    <span aria-label="JavaScript class" class="objinfo-icon objinfo-icon__data" title="JavaScript class">C</span><span title="module_b.submodule.ModNested (JavaScript class)" class="md-ellipsis">module_<wbr>b.<wbr>submodule.<wbr>Mod<wbr>Nested</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="module_b.submodule.ModNested">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.nested_child_1" class="md-nav__link">
+    <span aria-label="JavaScript method" class="objinfo-icon objinfo-icon__procedure" title="JavaScript method">M</span><span title="module_b.submodule.ModNested.nested_child_1 (JavaScript method)" class="md-ellipsis">Mod<wbr>Nested.<wbr>nested_<wbr>child_<wbr>1</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.nested_child_2" class="md-nav__link">
+    <span aria-label="JavaScript method" class="objinfo-icon objinfo-icon__procedure" title="JavaScript method">M</span><span title="module_b.submodule.ModNested.nested_child_2 (JavaScript method)" class="md-ellipsis">Mod<wbr>Nested.<wbr>nested_<wbr>child_<wbr>2</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.getJSON" class="md-nav__link">
+    <span aria-label="JavaScript method" class="objinfo-icon objinfo-icon__procedure" title="JavaScript method">M</span><span title="module_b.submodule.ModNested.getJSON (JavaScript method)" class="md-ellipsis">Mod<wbr>Nested.<wbr>get<wbr>JSON</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ModNested.getJSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.getJSON-arguments" class="md-nav__link">
+    <span class="md-ellipsis">Arguments</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.getJSON-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.getJSON-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-index" class="md-nav__link">
+    <span class="md-ellipsis">Generated Index</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">Data</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Data_item_1" class="md-nav__link">
+    <span aria-label="Python data" class="objinfo-icon objinfo-icon__alias" title="Python data">V</span><span title="test_py_module.test.Data_item_1 (Python data) — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue elit eu hendrerit mattis." class="md-ellipsis">test_<wbr>py_<wbr>module.<wbr>test.<wbr>Data_<wbr>item_<wbr>1</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python_apigen_demo.html" class="md-nav__link">
+        <span class="md-ellipsis">python_<wbr>apigen demo</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cpp_apigen_demo.html" class="md-nav__link">
+        <span class="md-ellipsis">cpp_<wbr>apigen demo</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="specimen.html" class="md-nav__link">
+        <span class="md-ellipsis">Specimen</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rst_basics.html" class="md-nav__link">
+        <span class="md-ellipsis">re<wbr>Structured<wbr>Text Primer</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rst-cheatsheet/rst-cheatsheet.html" class="md-nav__link">
+        <span class="md-ellipsis">rst Cheatsheet</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="additional_samples.html" class="md-nav__link">
+        <span class="md-ellipsis">Additional Samples</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      <span class="md-ellipsis">sample API documentation and generated content</span>
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-api" class="md-nav__link">
+    <span class="md-ellipsis">Python API</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-py-module" class="md-nav__link">
+    <span class="md-ellipsis">test_<wbr>py_<wbr>module</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="test_py_module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo" class="md-nav__link">
+    <span aria-label="Python class" class="objinfo-icon objinfo-icon__data" title="Python class">C</span><span title="test_py_module.test.Foo (Python class) — Docstring for class Foo." class="md-ellipsis">test_<wbr>py_<wbr>module.<wbr>test.<wbr>Foo</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="test_py_module.test.Foo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.__init__" class="md-nav__link">
+    <span aria-label="Python method" class="objinfo-icon objinfo-icon__procedure" title="Python method">M</span><span title="test_py_module.test.Foo.__init__ (Python method) — Start the Foo." class="md-ellipsis">__<wbr>init__<wbr></span>
+  </a>
+  
+    <nav class="md-nav" aria-label="__init__">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.__init__-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.__init__.qux" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.__init__.qux (Python parameter) — The first argument to initialize class." class="md-ellipsis">qux</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.__init__.spam" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.__init__.spam (Python parameter) — Spam me yes or no..." class="md-ellipsis">spam</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.__weakref__" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.__weakref__ (Python attribute) — list of weak references to the object (if defined)" class="md-ellipsis">__<wbr>weakref__<wbr></span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.add" class="md-nav__link">
+    <span aria-label="Python method" class="objinfo-icon objinfo-icon__procedure" title="Python method">M</span><span title="test_py_module.test.Foo.add (Python method) — Return the added values." class="md-ellipsis">add</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="add">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.add-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.add.val1" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.add.val1 (Python parameter) — First number to add." class="md-ellipsis">val1</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.add.val2" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.add.val2 (Python parameter) — Second number to add." class="md-ellipsis">val2</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.add-return-type" class="md-nav__link">
+    <span class="md-ellipsis">Return type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function" class="md-nav__link">
+    <span aria-label="Python method" class="objinfo-icon objinfo-icon__procedure" title="Python method">M</span><span title="test_py_module.test.Foo.another_function (Python method) — Here is another function." class="md-ellipsis">another_<wbr>function</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="another_function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function.a" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.another_function.a (Python parameter) — The number of green hats you own." class="md-ellipsis">a</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function.b" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.another_function.b (Python parameter) — The number of non-green hats you own." class="md-ellipsis">b</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function.kwargs" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.another_function.kwargs (Python parameter) — Additional keyword arguments. Each keyword parameter should specify the name of your favorite cuisine. The values should be floats, specifying the mean price of your favorite dish in that cooking style." class="md-ellipsis">kwargs</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function-return-type" class="md-nav__link">
+    <span class="md-ellipsis">Return type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.another_function-raises" class="md-nav__link">
+    <span class="md-ellipsis">Raises</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.bar" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.bar (Python attribute) — Doc comment for class attribute Foo.bar. It can have multiple lines." class="md-ellipsis">bar</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.baz" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.baz (Python attribute) — Docstring for class attribute Foo.baz." class="md-ellipsis">baz</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.capitalize" class="md-nav__link">
+    <span aria-label="Python method" class="objinfo-icon objinfo-icon__procedure" title="Python method">M</span><span title="test_py_module.test.Foo.capitalize (Python method) — Return a string as uppercase." class="md-ellipsis">capitalize</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="capitalize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.capitalize-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.capitalize.myvalue" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.Foo.capitalize.myvalue (Python parameter) — String to change" class="md-ellipsis">myvalue</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.capitalize-return-type" class="md-nav__link">
+    <span class="md-ellipsis">Return type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.flox" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.flox (Python attribute) — Doc comment for Foo.flox. One line only." class="md-ellipsis">flox</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.qux" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.qux (Python attribute) — Doc comment for instance attribute qux." class="md-ellipsis">qux</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.qux_caps" class="md-nav__link">
+    <span aria-label="Python property" class="objinfo-icon objinfo-icon__alias" title="Python property">P</span><span title="test_py_module.test.Foo.qux_caps (Python property) — Return the instance qux as uppercase." class="md-ellipsis">qux_<wbr>caps</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.qux_caps_cached" class="md-nav__link">
+    <span aria-label="Python property" class="objinfo-icon objinfo-icon__alias" title="Python property">P</span><span title="test_py_module.test.Foo.qux_caps_cached (Python property) — Return the cached value of instance qux as uppercase." class="md-ellipsis">qux_<wbr>caps_<wbr>cached</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Foo.spam" class="md-nav__link">
+    <span aria-label="Python attribute" class="objinfo-icon objinfo-icon__alias" title="Python attribute">A</span><span title="test_py_module.test.Foo.spam (Python attribute) — Docstring for instance attribute spam." class="md-ellipsis">spam</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.func" class="md-nav__link">
+    <span aria-label="Python function" class="objinfo-icon objinfo-icon__procedure" title="Python function">F</span><span title="test_py_module.test.func (Python function) — A function with many parameters." class="md-ellipsis">test_<wbr>py_<wbr>module.<wbr>test.<wbr>func</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.overloaded_func" class="md-nav__link">
+    <span aria-label="Python function" class="objinfo-icon objinfo-icon__procedure" title="Python function">F</span><span title="test_py_module.test.overloaded_func (Python function) — Adds a and b." class="md-ellipsis">test_<wbr>py_<wbr>module.<wbr>test.<wbr>overloaded_<wbr>func</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="test_py_module.test.overloaded_func">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.overloaded_func-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.overloaded_func.a" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.overloaded_func.a (Python parameter) — First operand." class="md-ellipsis">a</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.overloaded_func.b" class="md-nav__link">
+    <span aria-label="Python parameter" class="objinfo-icon objinfo-icon__sub-data" title="Python parameter">p</span><span title="test_py_module.test.overloaded_func.b (Python parameter) — Second operand." class="md-ellipsis">b</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-api" class="md-nav__link">
+    <span class="md-ellipsis">C++ API</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C++ API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv46MyType" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="MyType (C++ type) — Some type" class="md-ellipsis">My<wbr>Type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c.DEFAULT_LENGTH" class="md-nav__link">
+    <span aria-label="C macro" class="objinfo-icon objinfo-icon__alias" title="C macro">D</span><span title="DEFAULT_LENGTH (C macro)" class="md-ellipsis">DEFAULT_<wbr>LENGTH</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="Foo (C++ function) — Some function type thing" class="md-ellipsis">Foo</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Foo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-template-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Template Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Template Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-T" class="md-nav__link">
+    <span aria-label="C++ type template parameter" class="objinfo-icon objinfo-icon__alias" title="C++ type template parameter">T</span><span title="Foo::T (C++ type template parameter) — Some type template parameter." class="md-ellipsis">T</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-K" class="md-nav__link">
+    <span aria-label="C++ non-type template parameter" class="objinfo-icon objinfo-icon__data" title="C++ non-type template parameter">N</span><span title="Foo::K (C++ non-type template parameter) — Some non-type template parameter." class="md-ellipsis">K</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-bar" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Foo::bar (C++ function parameter) — This is the bar parameter." class="md-ellipsis">bar</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-arr" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Foo::arr (C++ function parameter) — Array of something." class="md-ellipsis">arr <wbr>[out]</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-len" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Foo::len (C++ function parameter) — Length of arr." class="md-ellipsis">len</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-baz" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="Foo::baz (C++ function parameter) — Baz parameter." class="md-ellipsis">baz</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c.MY_MACRO" class="md-nav__link">
+    <span aria-label="C macro" class="objinfo-icon objinfo-icon__alias" title="C macro">D</span><span title="MY_MACRO (C macro) — Expands to something." class="md-ellipsis">MY_<wbr>MACRO</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MY_MACRO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c.MY_MACRO-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c.MY_MACRO-p-X" class="md-nav__link">
+    <span aria-label="C macro parameter" class="objinfo-icon objinfo-icon__sub-data" title="C macro parameter">p</span><span title="MY_MACRO.X (C macro parameter) — The X parameter to the macro." class="md-ellipsis">X</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c.MY_MACRO-p-Y" class="md-nav__link">
+    <span aria-label="C macro parameter" class="objinfo-icon objinfo-icon__sub-data" title="C macro parameter">p</span><span title="MY_MACRO.Y (C macro parameter) — The Y parameter to the macro." class="md-ellipsis">Y</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0000_NSt6size_tEENSt5arrayE" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="std::array (C++ class) — Some cpp class" class="md-ellipsis">std::<wbr>array</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N6Sphinx7versionE" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="Sphinx::version (C++ member) — The description of Sphinx::version." class="md-ellipsis">Sphinx::<wbr>version</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv47version" class="md-nav__link">
+    <span aria-label="C++ member" class="objinfo-icon objinfo-icon__alias" title="C++ member">V</span><span title="version (C++ member) — The description of version." class="md-ellipsis">version</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv44List" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="List (C++ type) — The description of List type." class="md-ellipsis">List</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv46MyEnum" class="md-nav__link">
+    <span aria-label="C++ enum" class="objinfo-icon objinfo-icon__data" title="C++ enum">E</span><span title="MyEnum (C++ enum) — An unscoped enum." class="md-ellipsis">My<wbr>Enum</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MyEnum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N6MyEnum1AE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="MyEnum::A (C++ enumerator)" class="md-ellipsis">A</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv412MyScopedEnum" class="md-nav__link">
+    <span aria-label="C++ enum" class="objinfo-icon objinfo-icon__data" title="C++ enum">E</span><span title="MyScopedEnum (C++ enum) — A scoped enum." class="md-ellipsis">My<wbr>Scoped<wbr>Enum</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MyScopedEnum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N12MyScopedEnum1BE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="MyScopedEnum::B (C++ enumerator) — Description of enumerator B." class="md-ellipsis">B</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv422MyScopedVisibilityEnum" class="md-nav__link">
+    <span aria-label="C++ enum" class="objinfo-icon objinfo-icon__data" title="C++ enum">E</span><span title="MyScopedVisibilityEnum (C++ enum) — A scoped enum with non-default visibility, and with a specified underlying type." class="md-ellipsis">My<wbr>Scoped<wbr>Visibility<wbr>Enum</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MyScopedVisibilityEnum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N22MyScopedVisibilityEnum1BE" class="md-nav__link">
+    <span aria-label="C++ enumerator" class="objinfo-icon objinfo-icon__data" title="C++ enumerator">e</span><span title="MyScopedVisibilityEnum::B (C++ enumerator)" class="md-ellipsis">B</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex8SomeTypeE" class="md-nav__link">
+    <span aria-label="C++ type" class="objinfo-icon objinfo-icon__alias" title="C++ type">T</span><span title="synopses_ex::SomeType (C++ type) — Description will be shown as a tooltip when hovering over cross-references to SomeType in other signatures as well as in the TOC." class="md-ellipsis">synopses_<wbr>ex::<wbr>Some<wbr>Type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="synopses_ex::Foo (C++ function) — Synopsis for this function, shown when hovering over cross references as well as in the TOC." class="md-ellipsis">synopses_<wbr>ex::<wbr>Foo</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="synopses_ex::Foo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-template-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Template Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Template Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-T" class="md-nav__link">
+    <span aria-label="C++ type template parameter" class="objinfo-icon objinfo-icon__alias" title="C++ type template parameter">T</span><span title="synopses_ex::Foo::T (C++ type template parameter) — Tooltip shown when hovering over cross-references to this template parameter." class="md-ellipsis">T</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-N" class="md-nav__link">
+    <span aria-label="C++ non-type template parameter" class="objinfo-icon objinfo-icon__data" title="C++ non-type template parameter">N</span><span title="synopses_ex::Foo::N (C++ non-type template parameter) — Tooltip shown for N." class="md-ellipsis">N</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-param" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="synopses_ex::Foo::param (C++ function parameter) — Tooltip shown for cross-references to this function parameter param." class="md-ellipsis">param</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-arr" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="synopses_ex::Foo::arr (C++ function parameter) — Tooltip shown for cross-references to this function parameter arr." class="md-ellipsis">arr</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5ClassE" class="md-nav__link">
+    <span aria-label="C++ class" class="objinfo-icon objinfo-icon__data" title="C++ class">C</span><span title="synopses_ex::Class (C++ class) — The pin attached to Chip Enable on the RF module" class="md-ellipsis">synopses_<wbr>ex::<wbr>Class</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="synopses_ex::Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t" class="md-nav__link">
+    <span aria-label="C++ function" class="objinfo-icon objinfo-icon__procedure" title="C++ function">F</span><span title="synopses_ex::Class::Class (C++ function) — The pin attached to Chip Enable on the RF module" class="md-ellipsis">Class</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-parameters" class="md-nav__link">
+    <span class="md-ellipsis">Parameters</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_cepin" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="synopses_ex::Class::Class::_cepin (C++ function parameter) — The pin attached to Chip Enable on the RF module" class="md-ellipsis">_<wbr>cepin</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_cspin" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="synopses_ex::Class::Class::_cspin (C++ function parameter) — The pin attached to Chip Select (often labeled CSN) on the radio module." class="md-ellipsis">_<wbr>cspin</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_spi_speed" class="md-nav__link">
+    <span aria-label="C++ function parameter" class="objinfo-icon objinfo-icon__sub-data" title="C++ function parameter">p</span><span title="synopses_ex::Class::Class::_spi_speed (C++ function parameter) — The SPI speed in Hz ie: 1000000 == 1Mhz" class="md-ellipsis">_<wbr>spi_<wbr>speed</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-api" class="md-nav__link">
+    <span class="md-ellipsis">Java<wbr>Script API</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JavaScript API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module_a.submodule.ModTopLevel" class="md-nav__link">
+    <span aria-label="JavaScript class" class="objinfo-icon objinfo-icon__data" title="JavaScript class">C</span><span title="module_a.submodule.ModTopLevel (JavaScript class)" class="md-ellipsis">module_<wbr>a.<wbr>submodule.<wbr>Mod<wbr>Top<wbr>Level</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_a.submodule.ModTopLevel.mod_child_1" class="md-nav__link">
+    <span aria-label="JavaScript method" class="objinfo-icon objinfo-icon__procedure" title="JavaScript method">M</span><span title="module_a.submodule.ModTopLevel.mod_child_1 (JavaScript method)" class="md-ellipsis">Mod<wbr>Top<wbr>Level.<wbr>mod_<wbr>child_<wbr>1</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_a.submodule.ModTopLevel.mod_child_2" class="md-nav__link">
+    <span aria-label="JavaScript method" class="objinfo-icon objinfo-icon__procedure" title="JavaScript method">M</span><span title="module_a.submodule.ModTopLevel.mod_child_2 (JavaScript method)" class="md-ellipsis">Mod<wbr>Top<wbr>Level.<wbr>mod_<wbr>child_<wbr>2</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested" class="md-nav__link">
+    <span aria-label="JavaScript class" class="objinfo-icon objinfo-icon__data" title="JavaScript class">C</span><span title="module_b.submodule.ModNested (JavaScript class)" class="md-ellipsis">module_<wbr>b.<wbr>submodule.<wbr>Mod<wbr>Nested</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="module_b.submodule.ModNested">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.nested_child_1" class="md-nav__link">
+    <span aria-label="JavaScript method" class="objinfo-icon objinfo-icon__procedure" title="JavaScript method">M</span><span title="module_b.submodule.ModNested.nested_child_1 (JavaScript method)" class="md-ellipsis">Mod<wbr>Nested.<wbr>nested_<wbr>child_<wbr>1</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.nested_child_2" class="md-nav__link">
+    <span aria-label="JavaScript method" class="objinfo-icon objinfo-icon__procedure" title="JavaScript method">M</span><span title="module_b.submodule.ModNested.nested_child_2 (JavaScript method)" class="md-ellipsis">Mod<wbr>Nested.<wbr>nested_<wbr>child_<wbr>2</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.getJSON" class="md-nav__link">
+    <span aria-label="JavaScript method" class="objinfo-icon objinfo-icon__procedure" title="JavaScript method">M</span><span title="module_b.submodule.ModNested.getJSON (JavaScript method)" class="md-ellipsis">Mod<wbr>Nested.<wbr>get<wbr>JSON</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ModNested.getJSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.getJSON-arguments" class="md-nav__link">
+    <span class="md-ellipsis">Arguments</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.getJSON-throws" class="md-nav__link">
+    <span class="md-ellipsis">Throws</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_b.submodule.ModNested.getJSON-returns" class="md-nav__link">
+    <span class="md-ellipsis">Returns</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-index" class="md-nav__link">
+    <span class="md-ellipsis">Generated Index</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">Data</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test_py_module.test.Data_item_1" class="md-nav__link">
+    <span aria-label="Python data" class="objinfo-icon objinfo-icon__alias" title="Python data">V</span><span title="test_py_module.test.Data_item_1 (Python data) — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue elit eu hendrerit mattis." class="md-ellipsis">test_<wbr>py_<wbr>module.<wbr>test.<wbr>Data_<wbr>item_<wbr>1</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+  <a href="https://github.com/jbms/sphinx-immaterial/blob/main/docs/demo_api.rst" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+  </a>
+
+<h1 id="sample-api-documentation-and-generated-content"><a class="toc-backref" href="#id6" role="doc-backlink">sample API documentation and generated content</a><a class="headerlink" href="#sample-api-documentation-and-generated-content" title="Permalink to this heading">¶</a></h1>
+<nav class="contents" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#sample-api-documentation-and-generated-content" id="id6">sample API documentation and generated content</a></p>
+<ul>
+<li><p><a class="reference internal" href="#python-api" id="id7">Python API</a></p>
+<ul>
+<li><p><a class="reference internal" href="#test-py-module" id="id8"><code class="docutils literal notranslate"><span class="pre">test_py_module</span></code></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#c-api" id="id9">C++ API</a></p></li>
+<li><p><a class="reference internal" href="#javascript-api" id="id10">JavaScript API</a></p></li>
+<li><p><a class="reference internal" href="#generated-index" id="id11">Generated Index</a></p></li>
+<li><p><a class="reference internal" href="#data" id="id12">Data</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<h2 id="python-api"><a class="toc-backref" href="#id7" role="doc-backlink">Python API</a><a class="headerlink" href="#python-api" title="Permalink to this heading">¶</a></h2>
+<h3 id="test-py-module"><a class="toc-backref" href="#id8" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">test_py_module</span></code></a><a class="headerlink" href="#test-py-module" title="Permalink to this heading">¶</a></h3>
+<div class="results docutils container">
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption highlight"><span class="caption-text filename">
+autodoc example<a class="headerlink" href="#id1" title="Permalink to this code">¶</a></span></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> test_py_module.test
+   <span class="nc">:members:</span>
+   <span class="nc">:private-members:</span>
+   <span class="nc">:special-members:</span>
+</code></pre></div>
+</div>
+</div>
+<div class="result docutils container">
+<span class="target" id="module-test_py_module.test"></span><p>Test Module for sphinx_rtd_theme.</p>
+<dl class="py class objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">test_py_module.test.</span></span><span class="sig-name descname"><span class="pre">Foo</span></span><a class="reference internal" href="_modules/test_py_module/test.html#Foo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#test_py_module.test.Foo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Docstring for class Foo.</p>
+<p>This text tests for the formatting of docstrings generated from output
+<code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code>. Which contain reST, but sphinx nests it in the
+<code class="docutils literal notranslate"><span class="pre">&lt;dl&gt;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;dt&gt;</span></code> tags. Also, <code class="docutils literal notranslate"><span class="pre">&lt;tt&gt;</span></code> is used for class, method names
+and etc, but those will <em>always</em> have the <code class="docutils literal notranslate"><span class="pre">.descname</span></code> or
+<code class="docutils literal notranslate"><span class="pre">.descclassname</span></code> class.</p>
+<p>Normal <code class="docutils literal notranslate"><span class="pre">&lt;tt&gt;</span></code> (like the &lt;tt&gt; I just wrote here) needs to be shown with
+the same style as anything else with <code class="docutils literal notranslate"><span class="pre">``this</span> <span class="pre">type</span> <span class="pre">of</span> <span class="pre">markup``</span></code>.</p>
+<p>It’s common for programmers to give a code example inside of their
+docstring:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">test_py_module</span> <span class="kn">import</span> <span class="n">Foo</span>
+
+<span class="n">myclass</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
+<span class="n">myclass</span><span class="o">.</span><span class="n">dothismethod</span><span class="p">(</span><span class="s1">&#39;with this argument&#39;</span><span class="p">)</span>
+<span class="n">myclass</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">myclass</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Here is a link to <a class="reference internal" href="#test_py_module.test.Foo.capitalize" title="test_py_module.test.Foo.capitalize (Python method) — Return a string as uppercase."><code class="xref py py-meth docutils literal notranslate"><span class="pre">capitalize()</span></code></a>.
+Here is a link to <a class="reference internal" href="#test_py_module.test.Foo.__init__" title="test_py_module.test.Foo.__init__ (Python method) — Start the Foo."><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a>.</p>
+<dl class="py method objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#test_py_module.test.Foo.__init__.qux" title="test_py_module.test.Foo.__init__.qux (Python parameter) — The first argument to initialize class."><span class="n"><span class="pre">qux</span></span></a></em>, </span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#test_py_module.test.Foo.__init__.spam" title="test_py_module.test.Foo.__init__.spam (Python parameter) — Spam me yes or no..."><span class="n"><span class="pre">spam</span></span></a><span class="o"><span class="pre">=</span></span><code class="code python default_value docutils literal highlight highlight-python"><span class="kc">False</span></code></em></span><span class="sig-paren">)</span><a class="reference internal" href="_modules/test_py_module/test.html#Foo.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#test_py_module.test.Foo.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the Foo.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="test_py_module.test.Foo.__init__-parameters">Parameters<span class="colon">:</span><a class="headerlink" href="#test_py_module.test.Foo.__init__-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
+<dt id="test_py_module.test.Foo.__init__.qux"><span class="sig-name descname">qux</span><span class="p"> : </span><span class="desctype"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)">str</a></span></span><a class="headerlink" href="#test_py_module.test.Foo.__init__.qux" title="Permalink to this definition">¶</a></dt><dd><p>The first argument to initialize class.</p>
+</dd>
+<dt id="test_py_module.test.Foo.__init__.spam"><span class="sig-name descname">spam</span><span class="p"> : </span><span class="desctype"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)">bool</a></span></span><a class="headerlink" href="#test_py_module.test.Foo.__init__.spam" title="Permalink to this definition">¶</a></dt><dd><p>Spam me yes or no…</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.__weakref__">
+<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#test_py_module.test.Foo.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="py method objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#test_py_module.test.Foo.add.val1" title="test_py_module.test.Foo.add.val1 (Python parameter) — First number to add."><span class="n"><span class="pre">val1</span></span></a></em>, </span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#test_py_module.test.Foo.add.val2" title="test_py_module.test.Foo.add.val2 (Python parameter) — Second number to add."><span class="n"><span class="pre">val2</span></span></a></em></span><span class="sig-paren">)</span><a class="reference internal" href="_modules/test_py_module/test.html#Foo.add"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#test_py_module.test.Foo.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the added values.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="test_py_module.test.Foo.add-parameters">Parameters<span class="colon">:</span><a class="headerlink" href="#test_py_module.test.Foo.add-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
+<dt id="test_py_module.test.Foo.add.val1"><span class="sig-name descname">val1</span><span class="p"> : </span><span class="desctype"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)">int</a></span></span><a class="headerlink" href="#test_py_module.test.Foo.add.val1" title="Permalink to this definition">¶</a></dt><dd><p>First number to add.</p>
+</dd>
+<dt id="test_py_module.test.Foo.add.val2"><span class="sig-name descname">val2</span><span class="p"> : </span><span class="desctype"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)">int</a></span></span><a class="headerlink" href="#test_py_module.test.Foo.add.val2" title="Permalink to this definition">¶</a></dt><dd><p>Second number to add.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="test_py_module.test.Foo.add-return-type">Return type<span class="colon">:</span><a class="headerlink" href="#test_py_module.test.Foo.add-return-type" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.another_function">
+<span class="sig-name descname"><span class="pre">another_function</span></span><span class="sig-paren">(</span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#test_py_module.test.Foo.another_function.a" title="test_py_module.test.Foo.another_function.a (Python parameter) — The number of green hats you own."><span class="n"><span class="pre">a</span></span></a></em>, </span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#test_py_module.test.Foo.another_function.b" title="test_py_module.test.Foo.another_function.b (Python parameter) — The number of non-green hats you own."><span class="n"><span class="pre">b</span></span></a></em>, </span><span class="sig-param-decl"><em class="sig-param"><span class="o"><span class="pre">**</span></span><a class="n reference internal" href="#test_py_module.test.Foo.another_function.kwargs" title="test_py_module.test.Foo.another_function.kwargs (Python parameter) — Additional keyword arguments. Each keyword parameter should specify the name of your favorite cuisine. The values should be floats, specifying the mean price of your favorite dish in that cooking style."><span class="n"><span class="pre">kwargs</span></span></a></em></span><span class="sig-paren">)</span><a class="reference internal" href="_modules/test_py_module/test.html#Foo.another_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#test_py_module.test.Foo.another_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Here is another function.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="test_py_module.test.Foo.another_function-parameters">Parameters<span class="colon">:</span><a class="headerlink" href="#test_py_module.test.Foo.another_function-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
+<dt id="test_py_module.test.Foo.another_function.a"><span class="sig-name descname">a</span><span class="p"> : </span><span class="desctype"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)">int</a></span></span><a class="headerlink" href="#test_py_module.test.Foo.another_function.a" title="Permalink to this definition">¶</a></dt><dd><p>The number of green hats you own.</p>
+</dd>
+<dt id="test_py_module.test.Foo.another_function.b"><span class="sig-name descname">b</span><span class="p"> : </span><span class="desctype"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)">int</a></span></span><a class="headerlink" href="#test_py_module.test.Foo.another_function.b" title="Permalink to this definition">¶</a></dt><dd><p>The number of non-green hats you own.</p>
+</dd>
+<dt id="test_py_module.test.Foo.another_function.kwargs"><span class="sig-name descname">kwargs</span><span class="p"> : </span><span class="desctype"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)">float</a></span></span><a class="headerlink" href="#test_py_module.test.Foo.another_function.kwargs" title="Permalink to this definition">¶</a></dt><dd><p>Additional keyword arguments. Each keyword parameter
+should specify the name of your favorite cuisine.
+The values should be floats, specifying the mean price
+of your favorite dish in that cooking style.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="test_py_module.test.Foo.another_function-returns">Returns<span class="colon">:</span><a class="headerlink" href="#test_py_module.test.Foo.another_function-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p>A 2-tuple.  The first element is the mean price of all dishes
+across cuisines.  The second element is the total number of
+hats you own: <span class="math notranslate nohighlight">\(a + b\)</span>.</p>
+</dd>
+<dt class="field-odd" id="test_py_module.test.Foo.another_function-return-type">Return type<span class="colon">:</span><a class="headerlink" href="#test_py_module.test.Foo.another_function-return-type" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)">tuple</a></p>
+</dd>
+<dt class="field-even" id="test_py_module.test.Foo.another_function-raises">Raises<span class="colon">:</span><a class="headerlink" href="#test_py_module.test.Foo.another_function-raises" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><strong>ValueError</strong></a> – When <code class="docutils literal notranslate"><span class="pre">a</span></code> is not an integer.</p>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0: </span>This was added in 1.0</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span>This was changed in 2.0</p>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 3.0: </span>This is deprecated since 3.0</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.bar">
+<span class="sig-name descname"><span class="pre">bar</span></span><span class="p"> <span class="pre">=</span> </span><code class="code python docutils literal highlight highlight-python"><span class="mi">1</span></code><a class="headerlink" href="#test_py_module.test.Foo.bar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc comment for class attribute Foo.bar.
+It can have multiple lines.</p>
+</dd></dl>
+
+<dl class="py attribute objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.baz">
+<span class="sig-name descname"><span class="pre">baz</span></span><span class="p"> <span class="pre">=</span> </span><code class="code python docutils literal highlight highlight-python"><span class="mi">2</span></code><a class="headerlink" href="#test_py_module.test.Foo.baz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Docstring for class attribute Foo.baz.</p>
+</dd></dl>
+
+<dl class="py method objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.capitalize">
+<span class="sig-name descname"><span class="pre">capitalize</span></span><span class="sig-paren">(</span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#test_py_module.test.Foo.capitalize.myvalue" title="test_py_module.test.Foo.capitalize.myvalue (Python parameter) — String to change"><span class="n"><span class="pre">myvalue</span></span></a></em></span><span class="sig-paren">)</span><a class="reference internal" href="_modules/test_py_module/test.html#Foo.capitalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#test_py_module.test.Foo.capitalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a string as uppercase.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="test_py_module.test.Foo.capitalize-parameters">Parameters<span class="colon">:</span><a class="headerlink" href="#test_py_module.test.Foo.capitalize-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
+<dt id="test_py_module.test.Foo.capitalize.myvalue"><span class="sig-name descname">myvalue</span><span class="p"> : </span><span class="desctype"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)">str</a></span></span><a class="headerlink" href="#test_py_module.test.Foo.capitalize.myvalue" title="Permalink to this definition">¶</a></dt><dd><p>String to change</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="test_py_module.test.Foo.capitalize-return-type">Return type<span class="colon">:</span><a class="headerlink" href="#test_py_module.test.Foo.capitalize-return-type" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.flox">
+<span class="sig-name descname"><span class="pre">flox</span></span><span class="p"> <span class="pre">=</span> </span><code class="code python docutils literal highlight highlight-python"><span class="mf">1.5</span></code><a class="headerlink" href="#test_py_module.test.Foo.flox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc comment for Foo.flox. One line only.</p>
+</dd></dl>
+
+<dl class="py attribute objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.qux">
+<span class="sig-name descname"><span class="pre">qux</span></span><a class="headerlink" href="#test_py_module.test.Foo.qux" title="Permalink to this definition">¶</a></dt>
+<dd><p>Doc comment for instance attribute qux.</p>
+</dd></dl>
+
+<dl class="py property objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.qux_caps">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qux_caps</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span><a class="headerlink" href="#test_py_module.test.Foo.qux_caps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the instance qux as uppercase.</p>
+</dd></dl>
+
+<dl class="py property objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.qux_caps_cached">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qux_caps_cached</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span><a class="headerlink" href="#test_py_module.test.Foo.qux_caps_cached" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the cached value of instance qux as uppercase.</p>
+</dd></dl>
+
+<dl class="py attribute objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Foo.spam">
+<span class="sig-name descname"><span class="pre">spam</span></span><a class="headerlink" href="#test_py_module.test.Foo.spam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Docstring for instance attribute spam.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function objdesc">
+<dt class="sig sig-object highlight sig-wrap py" id="test_py_module.test.func">
+<span class="sig-prename descclassname"><span class="pre">test_py_module.test.</span></span><span class="sig-name descname"><span class="pre">func</span></span><span class="sig-paren">(</span><span class="sig-param-decl"><em class="sig-param"><span class="n"><span class="pre">long</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></span></em>, </span><span class="sig-param-decl"><em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></span></em>, </span><span class="sig-param-decl"><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span></em>, </span><span class="sig-param-decl"><em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></span></span></em>, </span><span class="sig-param-decl"><em class="sig-param"><span class="n"><span class="pre">lists</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a></span></span></em></span><span class="sig-paren">)</span><a class="reference internal" href="_modules/test_py_module/test.html#func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#test_py_module.test.func" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function with many parameters.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption highlight"><span class="caption-text filename">
+Python function with multiple signatures<a class="headerlink" href="#id2" title="Permalink to this code">¶</a></span></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">py:function</span><span class="p">::</span> overloaded_func(a: int, b: int) -&gt; int
+                 overloaded_func(a: float, b: float) -&gt; float
+
+   Adds <span class="na">:py:param:</span><span class="nv">`a`</span> and <span class="na">:py:param:</span><span class="nv">`b`</span>.
+
+   <span class="nc">:param a:</span> First operand.
+   <span class="nc">:param b:</span> Second operand.
+</code></pre></div>
+</div>
+</div>
+<div class="result docutils container">
+<dl class="py function objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.overloaded_func">
+<span class="sig-prename descclassname"><span class="pre">test_py_module.test.</span></span><span class="sig-name descname"><span class="pre">overloaded_func</span></span><span class="sig-paren">(</span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#test_py_module.test.overloaded_func.a" title="test_py_module.test.overloaded_func.a (Python parameter) — First operand."><span class="n"><span class="pre">a</span></span></a><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></span></em>, </span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#test_py_module.test.overloaded_func.b" title="test_py_module.test.overloaded_func.b (Python parameter) — Second operand."><span class="n"><span class="pre">b</span></span></a><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></span></em></span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></span></span><a class="headerlink" href="#test_py_module.test.overloaded_func" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object highlight py">
+<span class="sig-prename descclassname"><span class="pre">test_py_module.test.</span></span><span class="sig-name descname"><span class="pre">overloaded_func</span></span><span class="sig-paren">(</span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#test_py_module.test.overloaded_func.a" title="test_py_module.test.overloaded_func.a (Python parameter) — First operand."><span class="n"><span class="pre">a</span></span></a><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a></span></span></em>, </span><span class="sig-param-decl"><em class="sig-param"><a class="n reference internal" href="#test_py_module.test.overloaded_func.b" title="test_py_module.test.overloaded_func.b (Python parameter) — Second operand."><span class="n"><span class="pre">b</span></span></a><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a></span></span></em></span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a></span></span></span></dt>
+<dd><p>Adds <a class="reference internal" href="#test_py_module.test.overloaded_func.a" title="test_py_module.test.overloaded_func.a (Python parameter) — First operand."><code class="xref py py-param docutils literal notranslate"><span class="pre">a</span></code></a> and <a class="reference internal" href="#test_py_module.test.overloaded_func.b" title="test_py_module.test.overloaded_func.b (Python parameter) — Second operand."><code class="xref py py-param docutils literal notranslate"><span class="pre">b</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="test_py_module.test.overloaded_func-parameters">Parameters<span class="colon">:</span><a class="headerlink" href="#test_py_module.test.overloaded_func-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
+<dt id="test_py_module.test.overloaded_func.a"><span class="n sig-name">a</span><span class="p">:</span><span class="w">   </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)">int</a></span></span><a class="headerlink" href="#test_py_module.test.overloaded_func.a" title="Permalink to this definition">¶</a></dt><dt><span class="n sig-name">a</span><span class="p">:</span><span class="w">   </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)">float</a></span></span></dt><dd><p>First operand.</p>
+</dd>
+<dt id="test_py_module.test.overloaded_func.b"><span class="n sig-name">b</span><span class="p">:</span><span class="w">   </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)">int</a></span></span><a class="headerlink" href="#test_py_module.test.overloaded_func.b" title="Permalink to this definition">¶</a></dt><dt><span class="n sig-name">b</span><span class="p">:</span><span class="w">   </span><span class="n"><span class="desctype"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)">float</a></span></span></dt><dd><p>Second operand.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<h2 id="c-api"><a class="toc-backref" href="#id9" role="doc-backlink">C++ API</a><a class="headerlink" href="#c-api" title="Permalink to this heading">¶</a></h2>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">cpp:type</span><span class="p">::</span> MyType
+
+   Some type
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv46MyType">
+<span id="_CPPv36MyType"></span><span id="_CPPv26MyType"></span><span id="MyType"></span><span class="k">type</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">MyType</span></span><a class="headerlink" href="#_CPPv46MyType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Some type</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">c:macro</span><span class="p">::</span> DEFAULT_LENGTH
+
+<span class="p">..</span> <span class="ow">cpp:function</span><span class="p">::</span> template &lt;typename T, int K&gt; \
+                  const MyType Foo(\
+                      const MyType bar, uint8_t* arr, \
+                      unsigned int len = DEFAULT_LENGTH, \
+                      bool baz= false)
+                  const MyType Foo(\
+                      const MyType bar, uint16_t* arr, \
+                      unsigned int len = DEFAULT_LENGTH, \
+                      bool baz= false)
+
+   Some function type thing
+
+   <span class="nc">:tparam T:</span> Some type template parameter.
+   <span class="nc">:tparam K:</span> Some non-type template parameter.
+   <span class="nc">:param bar:</span> This is the bar parameter.
+   <span class="nc">:param arr[out]:</span> Array of something.  Elements may be either
+       <span class="na">:cpp:expr:</span><span class="nv">`uint8_t`</span> or <span class="na">:cpp:expr:</span><span class="nv">`uint16_t`</span>.
+   <span class="nc">:param len:</span> Length of <span class="na">:cpp:expr:</span><span class="nv">`arr`</span>.
+   <span class="nc">:param baz:</span> Baz parameter.
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<dl class="c macro objdesc">
+<dt class="sig sig-object highlight c" id="c.DEFAULT_LENGTH">
+<span class="sig-name descname"><span class="n"><span class="pre">DEFAULT_LENGTH</span></span></span><a class="headerlink" href="#c.DEFAULT_LENGTH" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb">
+<span id="_CPPv3I0_iE3FooK6MyTypeP7uint8_tjb"></span><span id="_CPPv2I0_iE3FooK6MyTypeP7uint8_tjb"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-T" title="Foo::T (C++ type template parameter) — Some type template parameter."><span class="n">T</span></a></span></span><span class="p">,</span><span class="w">&nbsp;</span><span><span class="kt">int</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="n reference internal" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-K" title="Foo::K (C++ non-type template parameter) — Some non-type template parameter."><span class="n">K</span></a></span></span><span class="p">&gt;</span><span class="k"><br>const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv46MyType" title="MyType (C++ type) — Some type"><span class="n">MyType</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">Foo</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv46MyType" title="MyType (C++ type) — Some type"><span class="n">MyType</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-bar" title="Foo::bar (C++ function parameter) — This is the bar parameter."><span class="n sig-param">bar</span></a></span><span class="p">,</span><span><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint8_t (C standard type alias)"><span class="n">&nbsp;uint8_t</span></a><span class="w">&nbsp;</span><span class="p">*</span><a class="n sig-param reference internal" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-arr" title="Foo::arr (C++ function parameter) — Array of something."><span class="n sig-param">arr</span></a></span><span class="p">,</span><span><span class="kt"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned</span><span class="w">&nbsp;</span><span class="kt">int</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-len" title="Foo::len (C++ function parameter) — Length of arr."><span class="n sig-param">len</span></a><span class="w">&nbsp;</span><span class="p">=</span><span class="w">&nbsp;</span><a class="reference internal" href="#c.DEFAULT_LENGTH" title="DEFAULT_LENGTH (C macro)"><span class="n">DEFAULT_LENGTH</span></a></span><span class="p">,</span><span><span class="kt"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bool</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-baz" title="Foo::baz (C++ function parameter) — Baz parameter."><span class="n sig-param">baz</span></a><span class="w">&nbsp;</span><span class="p">=</span><span class="w">&nbsp;</span><span class="k">false</span></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object highlight cpp" id="_CPPv43FooK6MyTypeP8uint16_tjb">
+<span id="_CPPv33FooK6MyTypeP8uint16_tjb"></span><span id="_CPPv23FooK6MyTypeP8uint16_tjb"></span><span id="Foo__MyTypeC.uint16_tP.unsigned-i.b"></span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv46MyType" title="MyType (C++ type) — Some type"><span class="n">MyType</span></a><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">Foo</span></span><span><span class="p">(</span><span><span class="k">const</span><span class="w">&nbsp;</span><a class="desctype reference internal" href="#_CPPv46MyType" title="MyType (C++ type) — Some type"><span class="n">MyType</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43FooK6MyTypeP8uint16_tjb" title="Foo::bar (C++ function parameter)"><span class="n sig-param">bar</span></a></span><span class="p">,</span><span><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint16_t (C standard type alias)"><span class="n">&nbsp;uint16_t</span></a><span class="w">&nbsp;</span><span class="p">*</span><a class="n sig-param reference internal" href="#_CPPv43FooK6MyTypeP8uint16_tjb-p-arr" title="Foo::arr (C++ function parameter) — Array of something."><span class="n sig-param">arr</span></a></span><span class="p">,</span><span><span class="kt"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned</span><span class="w">&nbsp;</span><span class="kt">int</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43FooK6MyTypeP8uint16_tjb" title="Foo::len (C++ function parameter)"><span class="n sig-param">len</span></a><span class="w">&nbsp;</span><span class="p">=</span><span class="w">&nbsp;</span><a class="reference internal" href="#c.DEFAULT_LENGTH" title="DEFAULT_LENGTH (C macro)"><span class="n">DEFAULT_LENGTH</span></a></span><span class="p">,</span><span><span class="kt"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bool</span><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv43FooK6MyTypeP8uint16_tjb" title="Foo::baz (C++ function parameter)"><span class="n sig-param">baz</span></a><span class="w">&nbsp;</span><span class="p">=</span><span class="w">&nbsp;</span><span class="k">false</span></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv43FooK6MyTypeP8uint16_tjb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Some function type thing</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-template-parameters">Template Parameters<span class="colon">:</span><a class="headerlink" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-template-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
+<dt id="_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-T"><span class="k">typename</span><span class="w">   </span><span class="sig-name descname"><span class="n">T</span></span><a class="headerlink" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-T" title="Permalink to this definition">¶</a></dt><dd><p>Some type template parameter.</p>
+</dd>
+<dt id="_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-K"><span class="kt">int</span><span class="w">   </span><span class="sig-name descname"><span class="n">K</span></span><a class="headerlink" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-K" title="Permalink to this definition">¶</a></dt><dd><p>Some non-type template parameter.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-parameters">Parameters<span class="colon">:</span><a class="headerlink" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><dl class="simple api-field highlight">
+<dt id="_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-bar"><span class="k">const</span><span class="w">   </span><a class="desctype reference internal" href="#_CPPv46MyType" title="MyType (C++ type) — Some type"><span class="n">MyType</span></a><span class="w">   </span><span class="n sig-param sig-name">bar</span><a class="headerlink" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-bar" title="Permalink to this definition">¶</a></dt><dd><p>This is the bar parameter.</p>
+</dd>
+<dt class="api-parameter-kind">out</dt><dt id="_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-arr"><span id="_CPPv43FooK6MyTypeP8uint16_tjb-p-arr"></span><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint8_t (C standard type alias)"><span class="n">uint8_t</span></a><span class="w">   </span><span class="p">*</span><span class="n sig-param sig-name">arr</span><a class="headerlink" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-arr" title="Permalink to this definition">¶</a></dt><dt><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint16_t (C standard type alias)"><span class="n">uint16_t</span></a><span class="w">   </span><span class="p">*</span><span class="n sig-param sig-name">arr</span></dt><dd><p>Array of something.  Elements may be either
+<code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint8_t (C standard type alias)"><span class="n">uint8_t</span></a></code> or <code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint16_t (C standard type alias)"><span class="n">uint16_t</span></a></code>.</p>
+</dd>
+<dt id="_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-len"><span class="kt">unsigned</span><span class="w">   </span><span class="kt">int</span><span class="w">   </span><span class="n sig-param sig-name">len</span><span class="w">   </span><span class="p">=</span><span class="w">   </span><a class="reference internal" href="#c.DEFAULT_LENGTH" title="DEFAULT_LENGTH (C macro)"><span class="n">DEFAULT_LENGTH</span></a><a class="headerlink" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-len" title="Permalink to this definition">¶</a></dt><dd><p>Length of <code class="cpp-expr sig sig-inline cpp highlight"><a class="reference internal" href="#_CPPv43FooK6MyTypeP8uint16_tjb-p-arr" title="Foo::arr (C++ function parameter) — Array of something."><span class="n">arr</span></a></code>.</p>
+</dd>
+<dt id="_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-baz"><span class="kt">bool</span><span class="w">   </span><span class="n sig-param sig-name">baz</span><span class="w">   </span><span class="p">=</span><span class="w">   </span><span class="k">false</span><a class="headerlink" href="#_CPPv4I0_iE3FooK6MyTypeK6MyTypeP7uint8_tjb-p-baz" title="Permalink to this definition">¶</a></dt><dd><p>Baz parameter.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption highlight"><span class="caption-text filename">
+Cross-linking of macro parameters.<a class="headerlink" href="#id3" title="Permalink to this code">¶</a></span></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">c:macro</span><span class="p">::</span> MY_MACRO(X, Y, Z)
+
+   Expands to something.
+
+   <span class="nc">:param X:</span> The X parameter to the macro.
+   <span class="nc">:param Y:</span> The Y parameter to the macro.
+</code></pre></div>
+</div>
+</div>
+<div class="result docutils container">
+<dl class="c macro objdesc">
+<dt class="sig sig-object highlight c" id="c.MY_MACRO">
+<span class="sig-name descname"><span class="n"><span class="pre">MY_MACRO</span></span></span><span class="sig-paren">(</span><span class="sig-param-decl"><a class="n reference internal" href="#c.MY_MACRO-p-X" title="X (C macro parameter) — The X parameter to the macro."><span class="n"><span class="pre">X</span></span></a>, </span><span class="sig-param-decl"><a class="n reference internal" href="#c.MY_MACRO-p-Y" title="Y (C macro parameter) — The Y parameter to the macro."><span class="n"><span class="pre">Y</span></span></a>, </span><span class="sig-param-decl"><a class="n reference internal" href="#c.MY_MACRO" title="Z (C macro parameter)"><span class="n"><span class="pre">Z</span></span></a></span><span class="sig-paren">)</span><a class="headerlink" href="#c.MY_MACRO" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Expands to something.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="c.MY_MACRO-parameters">Parameters<span class="colon">:</span><a class="headerlink" href="#c.MY_MACRO-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
+<dt id="c.MY_MACRO-p-X"><span class="n sig-name">X</span><a class="headerlink" href="#c.MY_MACRO-p-X" title="Permalink to this definition">¶</a></dt><dd><p>The X parameter to the macro.</p>
+</dd>
+<dt id="c.MY_MACRO-p-Y"><span class="n sig-name">Y</span><a class="headerlink" href="#c.MY_MACRO-p-Y" title="Permalink to this definition">¶</a></dt><dd><p>The Y parameter to the macro.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">cpp:class</span><span class="p">::</span> template&lt;typename T, typename A, typename B, typename C, std::size_t N&gt; std::array
+
+   Some cpp class
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<dl class="cpp class objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I0000_NSt6size_tEENSt5arrayE">
+<span id="_CPPv3I0000_NSt6size_tEENSt5arrayE"></span><span id="_CPPv2I0000_NSt6size_tEENSt5arrayE"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0000_NSt6size_tEENSt5arrayE" title="std::array::T (C++ type template parameter)"><span class="n">T</span></a></span></span><span class="p">,</span><span class="w">&nbsp;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0000_NSt6size_tEENSt5arrayE" title="std::array::A (C++ type template parameter)"><span class="n">A</span></a></span></span><span class="p">,</span><span class="w">&nbsp;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0000_NSt6size_tEENSt5arrayE" title="std::array::B (C++ type template parameter)"><span class="n">B</span></a></span></span><span class="p">,</span><span class="w">&nbsp;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0000_NSt6size_tEENSt5arrayE" title="std::array::C (C++ type template parameter)"><span class="n">C</span></a></span></span><span class="p">,</span><span class="w"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/types/size_t" title="std::size_t (C++ standard type alias)"><span class="n">size_t</span></a><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="n reference internal" href="#_CPPv4I0000_NSt6size_tEENSt5arrayE" title="std::array::N (C++ non-type template parameter)"><span class="n">N</span></a></span></span><span class="p">&gt;</span><span class="k"><br>class</span><span class="w">&nbsp;</span><span class="sig-prename descclassname"><span class="n">std</span><span class="p">::</span></span><span class="sig-name descname"><span class="n">array</span></span><a class="headerlink" href="#_CPPv4I0000_NSt6size_tEENSt5arrayE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Some cpp class</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">cpp:member</span><span class="p">::</span> float Sphinx::version
+
+   The description of <span class="nv">`Sphinx::version`</span>.
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<dl class="cpp member objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N6Sphinx7versionE">
+<span id="_CPPv3N6Sphinx7versionE"></span><span id="_CPPv2N6Sphinx7versionE"></span><span id="Sphinx::version__float"></span><span class="kt">float</span><span class="w">&nbsp;</span><span class="sig-prename descclassname"><span class="n">Sphinx</span><span class="p">::</span></span><span class="sig-name descname"><span class="n">version</span></span><a class="headerlink" href="#_CPPv4N6Sphinx7versionE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of <a class="reference internal" href="#_CPPv4N6Sphinx7versionE" title="Sphinx::version (C++ member) — The description of Sphinx::version."><code class="xref any cpp cpp-member docutils literal notranslate"><span class="pre">Sphinx::version</span></code></a>.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">cpp:var</span><span class="p">::</span> int version
+
+   The description of version.
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<dl class="cpp var objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv47version">
+<span id="_CPPv37version"></span><span id="_CPPv27version"></span><span id="version__i"></span><span class="kt">int</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">version</span></span><a class="headerlink" href="#_CPPv47version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of version.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">cpp:type</span><span class="p">::</span> std::vector&lt;int&gt; List
+
+   The description of List type.
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv44List">
+<span id="_CPPv34List"></span><span id="_CPPv24List"></span><span id="List"></span><span class="k">typedef</span><span class="w">&nbsp;</span><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/container/vector" title="std::vector (C++ standard class)"><span class="n">vector</span></a><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">List</span></span><a class="headerlink" href="#_CPPv44List" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of List type.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">cpp:enum</span><span class="p">::</span> MyEnum
+
+   An unscoped enum.
+
+<span class="p">   ..</span> <span class="ow">cpp:enumerator</span><span class="p">::</span> A
+
+<span class="p">..</span> <span class="ow">cpp:enum-class</span><span class="p">::</span> MyScopedEnum
+
+   A scoped enum.
+
+<span class="p">   ..</span> <span class="ow">cpp:enumerator</span><span class="p">::</span> B
+
+      Description of enumerator B.
+
+<span class="p">..</span> <span class="ow">cpp:enum-struct</span><span class="p">::</span> protected MyScopedVisibilityEnum : std::underlying_type_t&lt;MyScopedEnum&gt;
+
+   A scoped enum with non-default visibility, and with a specified underlying type.
+
+<span class="p">   ..</span> <span class="ow">cpp:enumerator</span><span class="p">::</span> B
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<dl class="cpp enum objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv46MyEnum">
+<span id="_CPPv36MyEnum"></span><span id="_CPPv26MyEnum"></span><span class="k">enum</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">MyEnum</span></span><a class="headerlink" href="#_CPPv46MyEnum" title="Permalink to this definition">¶</a></dt>
+<dd><p>An unscoped enum.</p>
+<dl class="cpp enumerator objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N6MyEnum1AE">
+<span id="_CPPv3N6MyEnum1AE"></span><span id="_CPPv2N6MyEnum1AE"></span><span class="k">enumerator</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">A</span></span><a class="headerlink" href="#_CPPv4N6MyEnum1AE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv412MyScopedEnum">
+<span id="_CPPv312MyScopedEnum"></span><span id="_CPPv212MyScopedEnum"></span><span class="k">enum</span><span class="w">&nbsp;</span><span class="k">class</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">MyScopedEnum</span></span><a class="headerlink" href="#_CPPv412MyScopedEnum" title="Permalink to this definition">¶</a></dt>
+<dd><p>A scoped enum.</p>
+<dl class="cpp enumerator objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N12MyScopedEnum1BE">
+<span id="_CPPv3N12MyScopedEnum1BE"></span><span id="_CPPv2N12MyScopedEnum1BE"></span><span class="k">enumerator</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">B</span></span><a class="headerlink" href="#_CPPv4N12MyScopedEnum1BE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of enumerator B.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-struct objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv422MyScopedVisibilityEnum">
+<span id="_CPPv322MyScopedVisibilityEnum"></span><span id="_CPPv222MyScopedVisibilityEnum"></span><span class="k">protected</span><span class="w"><br></span><span class="k">enum</span><span class="w">&nbsp;</span><span class="k">struct</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">MyScopedVisibilityEnum</span></span><span class="w">&nbsp;</span><span class="p">:</span><span class="w">&nbsp;</span><span class="n">std</span><span class="p">::</span><a class="desctype reference external" href="https://en.cppreference.com/w/cpp/types/underlying_type" title="std::underlying_type_t (C++14 standard type alias)"><span class="n">underlying_type_t</span></a><span class="p">&lt;</span><a class="desctype reference internal" href="#_CPPv412MyScopedEnum" title="MyScopedEnum (C++ enum) — A scoped enum."><span class="n"><br>&nbsp;&nbsp;&nbsp;&nbsp;MyScopedEnum</span></a><span class="p">&gt;</span><a class="headerlink" href="#_CPPv422MyScopedVisibilityEnum" title="Permalink to this definition">¶</a></dt>
+<dd><p>A scoped enum with non-default visibility, and with a specified underlying type.</p>
+<dl class="cpp enumerator objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N22MyScopedVisibilityEnum1BE">
+<span id="_CPPv3N22MyScopedVisibilityEnum1BE"></span><span id="_CPPv2N22MyScopedVisibilityEnum1BE"></span><span class="k">enumerator</span><span class="w">&nbsp;</span><span class="sig-name descname"><span class="n">B</span></span><a class="headerlink" href="#_CPPv4N22MyScopedVisibilityEnum1BE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption highlight"><span class="caption-text filename">
+C++ synopses<a class="headerlink" href="#id4" title="Permalink to this code">¶</a></span></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">cpp:type</span><span class="p">::</span> synopses_ex::SomeType
+
+   Description will be shown as a tooltip when hovering over
+   cross-references to <span class="na">:cpp:expr:</span><span class="nv">`SomeType`</span> in other signatures as well as
+   in the TOC.
+
+   Additional description not shown in tooltip.  This is the return type
+   for <span class="na">:cpp:expr:</span><span class="nv">`Foo`</span>.
+
+<span class="p">..</span> <span class="ow">cpp:function</span><span class="p">::</span> template &lt;typename T, int N&gt; \
+                  synopses_ex::SomeType synopses_ex::Foo(\
+                    T param, \
+                    const int (&amp;arr)[N]\
+                  );
+
+   Synopsis for this function, shown when hovering over cross references
+   as well as in the TOC.
+
+   <span class="nc">:tparam T:</span> Tooltip shown when hovering over cross-references to this
+       template parameter.  Additional description not included in
+       tooltip.
+   <span class="nc">:tparam N:</span> Tooltip shown for N.
+   <span class="nc">:param param:</span> Tooltip shown for cross-references to this function
+       parameter param.
+   <span class="nc">:param arr:</span> Tooltip shown for cross-references to this function
+       parameter arr.  To cross reference another parameter, use the
+       <span class="na">:rst:role:</span><span class="nv">`cpp:expr`</span> role, e.g.: <span class="na">:cpp:expr:</span><span class="nv">`N`</span>.  Parameters can
+       also be referenced via their fake qualified name,
+       e.g. <span class="na">:cpp:expr:</span><span class="nv">`synopses_ex::Foo::N`</span>.
+   <span class="nc">:returns:</span> Something or other.
+</code></pre></div>
+</div>
+</div>
+<div class="result docutils container">
+<dl class="cpp type objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N11synopses_ex8SomeTypeE">
+<span id="_CPPv3N11synopses_ex8SomeTypeE"></span><span id="_CPPv2N11synopses_ex8SomeTypeE"></span><span id="synopses_ex::SomeType"></span><span class="k">type</span><span class="w">&nbsp;</span><span class="sig-prename descclassname"><span class="n">synopses_ex</span><span class="p">::</span></span><span class="sig-name descname"><span class="n">SomeType</span></span><a class="headerlink" href="#_CPPv4N11synopses_ex8SomeTypeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description will be shown as a tooltip when hovering over
+cross-references to <code class="cpp-expr sig sig-inline cpp highlight"><a class="desctype reference internal" href="#_CPPv4N11synopses_ex8SomeTypeE" title="synopses_ex::SomeType (C++ type) — Description will be shown as a tooltip when hovering over cross-references to SomeType in other signatures as well as in the TOC."><span class="n">SomeType</span></a></code> in other signatures as well as
+in the TOC.</p>
+<p>Additional description not shown in tooltip.  This is the return type
+for <code class="cpp-expr sig sig-inline cpp highlight"><a class="reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki" title="synopses_ex::Foo (C++ function) — Synopsis for this function, shown when hovering over cross references as well as in the TOC."><span class="n">Foo</span></a></code>.</p>
+</dd></dl>
+
+<dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki">
+<span id="_CPPv3I0_iEN11synopses_ex3FooE1TRA1N_Ki"></span><span id="_CPPv2I0_iEN11synopses_ex3FooE1TRAN_Ki"></span><span class="k">template</span><span class="p">&nbsp;&lt;</span><span><span class="k">typename</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="desctype n reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-T" title="synopses_ex::Foo::T (C++ type template parameter) — Tooltip shown when hovering over cross-references to this template parameter."><span class="n">T</span></a></span></span><span class="p">,</span><span class="w">&nbsp;</span><span><span class="kt">int</span><span class="w">&nbsp;</span><span class="sig-name descname sig-name-nonprimary"><a class="n reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-N" title="synopses_ex::Foo::N (C++ non-type template parameter) — Tooltip shown for N."><span class="n">N</span></a></span></span><span class="p">&gt;</span><span class="n"><br>synopses_ex</span><span class="p">::</span><a class="desctype reference internal" href="#_CPPv4N11synopses_ex8SomeTypeE" title="synopses_ex::SomeType (C++ type) — Description will be shown as a tooltip when hovering over cross-references to SomeType in other signatures as well as in the TOC."><span class="n">SomeType</span></a><span class="w">&nbsp;</span><span class="sig-prename descclassname"><span class="n">synopses_ex</span><span class="p">::</span></span><span class="sig-name descname"><span class="n">Foo</span></span><span><span class="p">(</span><span><a class="desctype reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-T" title="synopses_ex::Foo::T (C++ type template parameter) — Tooltip shown when hovering over cross-references to this template parameter."><span class="n">T</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-param" title="synopses_ex::Foo::param (C++ function parameter) — Tooltip shown for cross-references to this function parameter param."><span class="n sig-param">param</span></a></span><span class="p">,</span><span><span class="k"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const</span><span class="w">&nbsp;</span><span class="kt">int</span><span class="w">&nbsp;</span><span class="p">(</span><span class="p">&amp;</span><a class="n sig-param reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-arr" title="synopses_ex::Foo::arr (C++ function parameter) — Tooltip shown for cross-references to this function parameter arr."><span class="n sig-param">arr</span></a><span class="p">)</span><span class="p">[</span><a class="reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-N" title="synopses_ex::Foo::N (C++ non-type template parameter) — Tooltip shown for N."><span class="n">N</span></a><span class="p">]</span></span><span class="p">)</span></span><span class="p">;</span><a class="headerlink" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synopsis for this function, shown when hovering over cross references
+as well as in the TOC.</p>
+<dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-template-parameters">Template Parameters<span class="colon">:</span><a class="headerlink" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-template-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
+<dt id="_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-T"><span class="k">typename</span><span class="w">   </span><span class="sig-name descname"><span class="n">T</span></span><a class="headerlink" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-T" title="Permalink to this definition">¶</a></dt><dd><p>Tooltip shown when hovering over cross-references to this
+template parameter.  Additional description not included in
+tooltip.</p>
+</dd>
+<dt id="_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-N"><span class="kt">int</span><span class="w">   </span><span class="sig-name descname"><span class="n">N</span></span><a class="headerlink" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-N" title="Permalink to this definition">¶</a></dt><dd><p>Tooltip shown for N.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even" id="_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-parameters">Parameters<span class="colon">:</span><a class="headerlink" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><dl class="simple api-field highlight">
+<dt id="_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-param"><a class="desctype reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-T" title="synopses_ex::Foo::T (C++ type template parameter) — Tooltip shown when hovering over cross-references to this template parameter."><span class="n">T</span></a><span class="w">   </span><span class="n sig-param sig-name">param</span><a class="headerlink" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-param" title="Permalink to this definition">¶</a></dt><dd><p>Tooltip shown for cross-references to this function
+parameter param.</p>
+</dd>
+<dt id="_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-arr"><span class="k">const</span><span class="w">   </span><span class="kt">int</span><span class="w">   </span><span class="p">(</span><span class="p">&amp;</span><span class="n sig-param sig-name">arr</span><span class="p">)</span><span class="p">[</span><a class="reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-N" title="synopses_ex::Foo::N (C++ non-type template parameter) — Tooltip shown for N."><span class="n">N</span></a><span class="p">]</span><a class="headerlink" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-arr" title="Permalink to this definition">¶</a></dt><dd><p>Tooltip shown for cross-references to this function
+parameter arr.  To cross reference another parameter, use the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#role-cpp-expr" title="(in Sphinx v6.2.0)"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">cpp:expr</span></code></a> role, e.g.: <code class="cpp-expr sig sig-inline cpp highlight"><a class="reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-N" title="synopses_ex::Foo::N (C++ non-type template parameter) — Tooltip shown for N."><span class="n">N</span></a></code>.  Parameters can
+also be referenced via their fake qualified name,
+e.g. <code class="cpp-expr sig sig-inline cpp highlight"><span class="n">synopses_ex</span><span class="p">::</span><a class="reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki" title="synopses_ex::Foo (C++ function) — Synopsis for this function, shown when hovering over cross references as well as in the TOC."><span class="n">Foo</span></a><span class="p">::</span><a class="reference internal" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-p-N" title="synopses_ex::Foo::N (C++ non-type template parameter) — Tooltip shown for N."><span class="n">N</span></a></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd" id="_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-returns">Returns<span class="colon">:</span><a class="headerlink" href="#_CPPv4I0_iEN11synopses_ex3FooEN11synopses_ex8SomeTypeE1TRA1N_Ki-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>Something or other.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption highlight"><span class="caption-text filename">
+C++ function with parameter descriptions nested within class.<a class="headerlink" href="#id5" title="Permalink to this code">¶</a></span></div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">cpp:class</span><span class="p">::</span> synopses_ex::Class
+
+<span class="p">    ..</span> <span class="ow">cpp:function</span><span class="p">::</span> Class(uint16_t _cepin, uint16_t _cspin, uint32_t _spi_speed=RF24_SPI_SPEED)
+
+        <span class="nc">:param _cepin:</span> The pin attached to Chip Enable on the RF module
+        <span class="nc">:param _cspin:</span> The pin attached to Chip Select (often labeled CSN) on the radio module.
+        <span class="nc">:param _spi_speed:</span> The SPI speed in Hz ie: 1000000 == 1Mhz
+</code></pre></div>
+</div>
+</div>
+<div class="result docutils container">
+<dl class="cpp class objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N11synopses_ex5ClassE">
+<span id="_CPPv3N11synopses_ex5ClassE"></span><span id="_CPPv2N11synopses_ex5ClassE"></span><span id="synopses_ex::Class"></span><span class="k">class</span><span class="w">&nbsp;</span><span class="sig-prename descclassname"><span class="n">synopses_ex</span><span class="p">::</span></span><span class="sig-name descname"><span class="n">Class</span></span><a class="headerlink" href="#_CPPv4N11synopses_ex5ClassE" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="cpp function objdesc">
+<dt class="sig sig-object highlight cpp" id="_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t">
+<span id="_CPPv3N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t"></span><span id="_CPPv2N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t"></span><span id="synopses_ex::Class::Class__uint16_t.uint16_t.uint32_t"></span><span class="sig-name descname"><span class="n">Class</span></span><span><span class="p">(</span><span><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint16_t (C standard type alias)"><span class="n">uint16_t</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_cepin" title="synopses_ex::Class::Class::_cepin (C++ function parameter) — The pin attached to Chip Enable on the RF module"><span class="n sig-param">_cepin</span></a></span><span class="p">,</span><span><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint16_t (C standard type alias)"><span class="n">&nbsp;uint16_t</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_cspin" title="synopses_ex::Class::Class::_cspin (C++ function parameter) — The pin attached to Chip Select (often labeled CSN) on the radio module."><span class="n sig-param">_cspin</span></a></span><span class="p">,</span><span><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint32_t (C standard type alias)"><span class="n"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uint32_t</span></a><span class="w">&nbsp;</span><a class="n sig-param reference internal" href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_spi_speed" title="synopses_ex::Class::Class::_spi_speed (C++ function parameter) — The SPI speed in Hz ie: 1000000 == 1Mhz"><span class="n sig-param">_spi_speed</span></a><span class="w">&nbsp;</span><span class="p">=</span><span class="w">&nbsp;</span><span class="n">RF24_SPI_SPEED</span></span><span class="p">)</span></span><a class="headerlink" href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd" id="_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-parameters">Parameters<span class="colon">:</span><a class="headerlink" href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-parameters" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><dl class="simple api-field highlight">
+<dt id="_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_cepin"><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint16_t (C standard type alias)"><span class="n">uint16_t</span></a><span class="w">   </span><span class="n sig-param sig-name">_cepin</span><a class="headerlink" href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_cepin" title="Permalink to this definition">¶</a></dt><dd><p>The pin attached to Chip Enable on the RF module</p>
+</dd>
+<dt id="_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_cspin"><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint16_t (C standard type alias)"><span class="n">uint16_t</span></a><span class="w">   </span><span class="n sig-param sig-name">_cspin</span><a class="headerlink" href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_cspin" title="Permalink to this definition">¶</a></dt><dd><p>The pin attached to Chip Select (often labeled CSN) on the radio module.</p>
+</dd>
+<dt id="_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_spi_speed"><a class="desctype reference external" href="https://en.cppreference.com/w/c/types/integer" title="uint32_t (C standard type alias)"><span class="n">uint32_t</span></a><span class="w">   </span><span class="n sig-param sig-name">_spi_speed</span><span class="w">   </span><span class="p">=</span><span class="w">   </span><span class="n">RF24_SPI_SPEED</span><a class="headerlink" href="#_CPPv4N11synopses_ex5Class5ClassE8uint16_t8uint16_t8uint32_t-p-_spi_speed" title="Permalink to this definition">¶</a></dt><dd><p>The SPI speed in Hz ie: 1000000 == 1Mhz</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<h2 id="javascript-api"><a class="toc-backref" href="#id10" role="doc-backlink">JavaScript API</a><a class="headerlink" href="#javascript-api" title="Permalink to this heading">¶</a></h2>
+<span class="target" id="module-module_a.submodule"></span><div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="m">*</span> Link to <span class="na">:js:class:</span><span class="nv">`ModTopLevel`</span>
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<ul class="simple">
+<li><p>Link to <a class="reference internal" href="#module_a.submodule.ModTopLevel" title="module_a.submodule.ModTopLevel"><code class="xref js js-class docutils literal notranslate"><span class="pre">ModTopLevel()</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">js:class</span><span class="p">::</span> ModTopLevel
+
+   <span class="m">*</span> Link to <span class="na">:js:meth:</span><span class="nv">`mod_child_1`</span>
+   <span class="m">*</span> Link to <span class="na">:js:meth:</span><span class="nv">`ModTopLevel.mod_child_1`</span>
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<dl class="js class objdesc">
+<dt class="sig sig-object highlight js" id="module_a.submodule.ModTopLevel">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="n"><span class="pre">module_a</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">submodule</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">ModTopLevel</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#module_a.submodule.ModTopLevel" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Link to <a class="reference internal" href="#module_a.submodule.ModTopLevel.mod_child_1" title="module_a.submodule.ModTopLevel.mod_child_1"><code class="xref js js-meth docutils literal notranslate"><span class="pre">mod_child_1()</span></code></a></p></li>
+<li><p>Link to <a class="reference internal" href="#module_a.submodule.ModTopLevel.mod_child_1" title="module_a.submodule.ModTopLevel.mod_child_1"><code class="xref js js-meth docutils literal notranslate"><span class="pre">ModTopLevel.mod_child_1()</span></code></a></p></li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">js:method</span><span class="p">::</span> ModTopLevel.mod_child_1
+
+   <span class="m">*</span> Link to <span class="na">:js:meth:</span><span class="nv">`mod_child_2`</span>
+
+<span class="p">..</span> <span class="ow">js:method</span><span class="p">::</span> ModTopLevel.mod_child_2
+
+   <span class="m">*</span> Link to <span class="na">:js:meth:</span><span class="nv">`module_a.submodule.ModTopLevel.mod_child_1`</span>
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<dl class="js method objdesc">
+<dt class="sig sig-object highlight js" id="module_a.submodule.ModTopLevel.mod_child_1">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">ModTopLevel</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">mod_child_1</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#module_a.submodule.ModTopLevel.mod_child_1" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Link to <a class="reference internal" href="#module_a.submodule.ModTopLevel.mod_child_2" title="module_a.submodule.ModTopLevel.mod_child_2"><code class="xref js js-meth docutils literal notranslate"><span class="pre">mod_child_2()</span></code></a></p></li>
+</ul>
+</dd></dl>
+
+<dl class="js method objdesc">
+<dt class="sig sig-object highlight js" id="module_a.submodule.ModTopLevel.mod_child_2">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">ModTopLevel</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">mod_child_2</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#module_a.submodule.ModTopLevel.mod_child_2" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Link to <a class="reference internal" href="#module_a.submodule.ModTopLevel.mod_child_1" title="module_a.submodule.ModTopLevel.mod_child_1"><code class="xref js js-meth docutils literal notranslate"><span class="pre">module_a.submodule.ModTopLevel.mod_child_1()</span></code></a></p></li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="m">*</span> Link to <span class="na">:js:class:</span><span class="nv">`ModTopLevel`</span>
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<ul class="simple">
+<li><p>Link to <a class="reference internal" href="#module_a.submodule.ModTopLevel" title="module_a.submodule.ModTopLevel"><code class="xref js js-class docutils literal notranslate"><span class="pre">ModTopLevel()</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<span class="target" id="module-module_b.submodule"></span><div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">js:class</span><span class="p">::</span> ModNested
+
+<span class="p">   ..</span> <span class="ow">js:method</span><span class="p">::</span> nested_child_1
+
+      <span class="m">*</span> Link to <span class="na">:js:meth:</span><span class="nv">`nested_child_2`</span>
+
+<span class="p">   ..</span> <span class="ow">js:method</span><span class="p">::</span> nested_child_2
+
+      <span class="m">*</span> Link to <span class="na">:js:meth:</span><span class="nv">`nested_child_1`</span>
+
+<span class="p">   ..</span> <span class="ow">js:method</span><span class="p">::</span> getJSON(href, callback, priority[, err_back, flags])
+
+      <span class="nc">:param string href:</span> An URI to the location of the resource.
+      <span class="nc">:param callback:</span> Gets called with the object.
+      <span class="nc">:param err_back:</span>
+         Gets called in case the request fails. And a lot of other
+         text so we need multiple lines.
+      <span class="nc">:throws SomeError:</span> For whatever reason in that case.
+      <span class="nc">:returns:</span> Something.
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<dl class="js class objdesc">
+<dt class="sig sig-object highlight js" id="module_b.submodule.ModNested">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="n"><span class="pre">module_b</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">submodule</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">ModNested</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#module_b.submodule.ModNested" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="js method objdesc">
+<dt class="sig sig-object highlight js" id="module_b.submodule.ModNested.nested_child_1">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">ModNested</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">nested_child_1</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#module_b.submodule.ModNested.nested_child_1" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Link to <a class="reference internal" href="#module_b.submodule.ModNested.nested_child_2" title="module_b.submodule.ModNested.nested_child_2"><code class="xref js js-meth docutils literal notranslate"><span class="pre">nested_child_2()</span></code></a></p></li>
+</ul>
+</dd></dl>
+
+<dl class="js method objdesc">
+<dt class="sig sig-object highlight js" id="module_b.submodule.ModNested.nested_child_2">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">ModNested</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">nested_child_2</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#module_b.submodule.ModNested.nested_child_2" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Link to <a class="reference internal" href="#module_b.submodule.ModNested.nested_child_1" title="module_b.submodule.ModNested.nested_child_1"><code class="xref js js-meth docutils literal notranslate"><span class="pre">nested_child_1()</span></code></a></p></li>
+</ul>
+</dd></dl>
+
+<dl class="js method objdesc">
+<dt class="sig sig-object highlight js" id="module_b.submodule.ModNested.getJSON">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">ModNested</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getJSON</span></span></span><span class="sig-paren">(</span><span class="sig-param-decl"><em class="sig-param"><span class="n"><span class="pre">href</span></span></em>, </span><span class="sig-param-decl"><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, </span><span class="sig-param-decl"><em class="sig-param"><span class="n"><span class="pre">priority</span></span></em></span><span class="optional">[</span><span class="sig-param-decl">, <em class="sig-param"><span class="n"><span class="pre">err_back</span></span></em></span><span class="sig-param-decl">, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em></span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#module_b.submodule.ModNested.getJSON" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd" id="module_b.submodule.ModNested.getJSON-arguments">Arguments<span class="colon">:</span><a class="headerlink" href="#module_b.submodule.ModNested.getJSON-arguments" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>href</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – An URI to the location of the resource.</p></li>
+<li><p><strong>callback</strong> – Gets called with the object.</p></li>
+<li><p><strong>err_back</strong> – Gets called in case the request fails. And a lot of other
+text so we need multiple lines.</p></li>
+</ul>
+</dd>
+<dt class="field-even" id="module_b.submodule.ModNested.getJSON-throws">Throws<span class="colon">:</span><a class="headerlink" href="#module_b.submodule.ModNested.getJSON-throws" title="Permalink to this headline">¶</a></dt>
+<dd class="field-even"><p><span><code class="xref js js-func docutils literal notranslate"><span class="pre">SomeError()</span></code></span> – For whatever reason in that case.</p>
+</dd>
+<dt class="field-odd" id="module_b.submodule.ModNested.getJSON-returns">Returns<span class="colon">:</span><a class="headerlink" href="#module_b.submodule.ModNested.getJSON-returns" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd"><p>Something.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<h2 id="generated-index"><a class="toc-backref" href="#id11" role="doc-backlink">Generated Index</a><a class="headerlink" href="#generated-index" title="Permalink to this heading">¶</a></h2>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code>A generated index (<span class="na">:ref:</span><span class="nv">`genindex`</span>) is part of the Sphinx build process, unless
+<span class="nv">`html_use_index`</span> is set to <span class="na">:python:</span><span class="nv">`False`</span>.
+
+Sphinx also allows indexing by domain (programming language), as seen in the
+<span class="na">:ref:</span><span class="nv">`modindex`</span> for the demo Python module that is documented on this page.
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<p>A generated index (<a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a>) is part of the Sphinx build process, unless
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_use_index" title="(in Sphinx v6.2.0)"><code class="xref any docutils literal notranslate"><span class="pre">html_use_index</span></code></a> is set to <code class="code highlight python docutils literal highlight-python"><span class="kc">False</span></code>.</p>
+<p>Sphinx also allows indexing by domain (programming language), as seen in the
+<a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a> for the demo Python module that is documented on this page.</p>
+</div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Note</p>
+<p>This theme does not support a separate search page, since the search
+functionality is accessible in the site’s navigation bar.</p>
+</div>
+<h2 id="data"><a class="toc-backref" href="#id12" role="doc-backlink">Data</a><a class="headerlink" href="#data" title="Permalink to this heading">¶</a></h2>
+<div class="results docutils container">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">data</span><span class="p">::</span> Data_item_1
+          Data_item_2
+          Data_item_3
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue elit eu hendrerit mattis.
+
+Some data link <span class="na">:data:</span><span class="nv">`Data_item_1`</span>.
+</code></pre></div>
+</div>
+<div class="result docutils container">
+<dl class="py data objdesc">
+<dt class="sig sig-object highlight py" id="test_py_module.test.Data_item_1">
+<span class="sig-prename descclassname"><span class="pre">test_py_module.test.</span></span><span class="sig-name descname"><span class="pre">Data_item_1</span></span><a class="headerlink" href="#test_py_module.test.Data_item_1" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object highlight py" id="test_py_module.test.Data_item_2">
+<span class="sig-prename descclassname"><span class="pre">test_py_module.test.</span></span><span class="sig-name descname"><span class="pre">Data_item_2</span></span><a class="headerlink" href="#test_py_module.test.Data_item_2" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object highlight py" id="test_py_module.test.Data_item_3">
+<span class="sig-prename descclassname"><span class="pre">test_py_module.test.</span></span><span class="sig-name descname"><span class="pre">Data_item_3</span></span><a class="headerlink" href="#test_py_module.test.Data_item_3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue elit eu hendrerit mattis.</p>
+</dd></dl>
+
+<p>Some data link <a class="reference internal" href="#test_py_module.test.Data_item_1" title="test_py_module.test.Data_item_1 (Python data) — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue elit eu hendrerit mattis."><code class="xref py py-data docutils literal notranslate"><span class="pre">Data_item_1</span></code></a>.</p>
+</div>
+</div>
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      Jan 06, 2023
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="mermaid_diagrams.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mermaid diagrams" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Mermaid diagrams
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="python_apigen_demo.html" class="md-footer__link md-footer__link--next" aria-label="Next: python_apigen demo" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              python_apigen demo
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2021 The Sphinx-Immaterial Authors.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    6.1.1.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/jbms/sphinx-immaterial" target="_blank" rel="noopener" title="Source on github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://pypi.org/project/sphinx-immaterial/" target="_blank" rel="noopener" title="pypi.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.sections", "navigation.top", "search.share", "toc.follow", "toc.sticky", "content.tabs.link", "announce.dismiss"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike", "staticVersions": [{"aliases": [], "title": "ReadTheDocs", "version": "https://sphinx-immaterial.rtfd.io"}, {"aliases": [], "title": "Github Pages", "version": "https://jbms.github.io/sphinx-immaterial"}], "versionPath": null}}</script>
+    
+    
+      <script src="_static/javascripts/bundle.444abb77.min.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+  </body>
+</html>
